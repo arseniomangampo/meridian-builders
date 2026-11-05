@@ -10,3 +10,4 @@ vendor/
 Thumbs.db
 .vscode/
 .idea/
+package.json.backup

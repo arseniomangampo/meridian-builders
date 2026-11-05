@@ -1,0 +1,26 @@
+
+@import "tailwindcss";
+
+/*
+ * Meridian Builders
+ * Main Tailwind CSS entry point.
+ */
+
+/* Scan WordPress PHP templates for Tailwind classes. */
+@source "../../**/*.php";
+
+/* Scan our frontend JavaScript. */
+@source "../js/**/*.js";
+
+/*
+ * Brand design tokens.
+ * These are the initial approved brand colors.
+ */
+@theme {
+  --color-engineering-orange: #FF6538;
+  --color-obsidian: #0A0A0A;
+  --color-industrial-white: #F5F5F5;
+  --color-graphite: #1A1A1A;
+  --color-steel-gray: #858585;
+  --color-technical-cyan: #00A6C7;
+}
