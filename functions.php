@@ -135,19 +135,9 @@ function meridian_builders_widgets_init() {
 add_action( 'widgets_init', 'meridian_builders_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
+ * Frontend asset loading.
  */
-function meridian_builders_scripts() {
-	wp_enqueue_style( 'meridian-builders-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'meridian-builders-style', 'rtl', 'replace' );
-
-	wp_enqueue_script( 'meridian-builders-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'meridian_builders_scripts' );
+require get_template_directory() . '/inc/enqueue.php';
 
 /**
  * Implement the Custom Header feature.
